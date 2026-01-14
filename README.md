@@ -26,7 +26,7 @@ rustc --edition=2024 -O -C link-arg=-Wl,-stack_size,0x10000000 --cfg ONLINE_JUDG
 ```
 ## File Creation
 
-To create file `a.rs` in directory 4:
+To create file `a.rs` in directory `4`, and immediately open with `nvim`:
 
 ```
 chmod +x init.sh
