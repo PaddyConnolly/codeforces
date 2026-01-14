@@ -1,6 +1,6 @@
-# 🏆 Codeforces Template for Rust
+# 🏆 Codeforces Solutions and Template
 
-A high-performance Rust 1.89.0 boilerplate for [Codeforces](https://codeforces.com/) submissions.
+[Codeforces](https://codeforces.com/) solutions, including high-performance Rust 1.89.0 boilerplate for quick initialisation and compile.
 
 ## Compilation
 
@@ -31,6 +31,13 @@ To create file `a.rs` in directory `4`, and immediately open with `nvim`:
 ```
 chmod +x init.sh
 ./init.sh 4A
+```
+
+Compile and run with:
+
+```
+chmod +x run.sh
+./run.sh 4A
 ```
 
 ## Command Breakdown
