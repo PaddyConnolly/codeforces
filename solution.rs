@@ -1,7 +1,6 @@
 #![allow(unused)]
 use std::io::{self, BufRead, BufWriter, Write};
 
-/// Optimized Scanner for 2024 edition
 struct Scanner<R> {
     reader: R,
     tokens: std::collections::VecDeque<String>,
@@ -87,17 +86,14 @@ impl DSU {
 // --- CORE LOGIC ---
 
 fn solve<R: BufRead, W: Write>(scan: &mut Scanner<R>, out: &mut BufWriter<W>) {
-    // 1. Read test cases (if any)
     let t: usize = scan.next();
 
     for _ in 0..t {
-        // 2. Logic here
         let n: usize = scan.next();
         let a = scan.vec::<i64>(n);
 
         let sum: i64 = a.iter().sum();
 
-        // Use writeln! for buffered output
         writeln!(out, "{}", sum).ok();
     }
 }
@@ -112,6 +108,5 @@ fn main() {
 
     solve(&mut scan, &mut out);
 
-    // Explicit flush is good practice, though BufWriter handles it on drop
     out.flush().unwrap();
 }
