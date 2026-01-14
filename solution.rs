@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::io::{self, BufRead, BufWriter, Write};
 
 /// Optimized Scanner for 2024 edition

@@ -1,1 +1,4 @@
-solution
+*
+
+!.gitignore
+!solution.rs
