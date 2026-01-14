@@ -1,4 +1,9 @@
+# Only allow specific files
+#
+# Ignore everything first
 *
 
+# Specific files to unignore
 !.gitignore
 !solution.rs
+!init.sh
