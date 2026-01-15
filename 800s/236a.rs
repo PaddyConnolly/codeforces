@@ -1,5 +1,5 @@
 #![allow(unused)]
-use std::collections::{HashSet};
+use std::collections::HashSet;
 use std::io::{self, BufRead, BufWriter, Write};
 
 struct Scanner<R> {
@@ -94,7 +94,16 @@ impl DSU {
 fn solve<R: BufRead, W: Write>(scan: &mut Scanner<R>, out: &mut BufWriter<W>) {
     // Solve here
 
-    writeln!(out, "{}", ans);
+    let mut hs = HashSet::new();
+    let s: String = scan.next();
+
+    let ans = s.chars().map(|x| hs.insert(x)).filter(|x| *x).count() % 2;
+
+    if ans == 0 {
+        writeln!(out, "CHAT WITH HER!")
+    } else {
+        writeln!(out, "IGNORE HIM!")
+    };
 }
 
 fn main() {
